@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset = "utf-8"/>
+        <meta name = "viewport" content="inital-scale = 1.0, user-scalable=no">
+        <script type="text/javascript" src="http://maps.goole.com/maps/apijs?sensor=false">
+
+        </script>
+    </head>
+    <body>
+        <script type= "text/javascript">
+            var markerlcon = new google.maps.MarkerIamage("marker.png");
+
+            function MyPos()
+            {
+                if(navigator.geolocation)
+                {
+                navigator.geolocation.getCurrentPosition(CurPosition, ErrorCallback);
+                }
+            }    
+                function CurPosition(position)
+            {
+                var lat = position.coords.latitude;
+                var lng = position.coords.longitude;
+                document.getElementById("result").innerHTML = "위도:" + "경도:" + lng;
+                var latlng = new goole.maps.LatLng(lat, lng);
+                var options = {
+                    zoom: 15, 
+                    center: latlng,
+                    mapTypeld: google.maps.MapTypeld.ROADMAP
+                };
+            }
+        </script>
+    </body>
+</html>
