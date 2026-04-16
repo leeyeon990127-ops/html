@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <script>
+            function addSomeNumber(num) {
+                return num + 10;
+            }
+            function addSomeNumber(num) {
+                return num + 30;             //제일 마지막으로 작성된 함수만 호출된다 =430출력
+            }
+            var result = addSomeNumber(400);
+            alert(result);
+        </script>
+    </body>
+</html>

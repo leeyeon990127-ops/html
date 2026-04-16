@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            function sayhi() {
+                alert(arguments.length);
+                if(arguments.length == 1) {
+                    alert(arguments[0]);
+                }else if(arguments.length == 2) {
+                    alert(arguments[0] + ':' + arguments[1]);
+                }
+            }
+            sayHi();
+            sayHi('yeonsoo')
+            sayHi('yeonsoo', 'kildong');
+        </script>
+    </body>
+</html>
