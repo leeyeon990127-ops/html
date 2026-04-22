@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="urf-8"/>
+        <script>
+            function checkNumberic(elem, msg) {
+                var exp = /^[0-9]+$/;  //<-정규식  
+                if(elem.value.match(exp)) { //match 함수
+                    alert(elem.value);
+                    return true;
+                }else{
+                    alert(msg);
+                    elem.focus();
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            전화번호(-없이 입력) : <input type="text" id="phone" />
+            <input type="button" onclick="checkNumberic(document.getElementById('phone'), '슷자만 입력하세요!')"
+            value="확인" />
+        </form>
+    </body>
+</html>
